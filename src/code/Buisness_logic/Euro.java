@@ -45,4 +45,5 @@ public class Euro {
         return (double)valore/100 + " euro";
     }
     
+    
 }

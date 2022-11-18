@@ -24,9 +24,38 @@ public class EuroTest {
             assertEquals(test.getValore(), 200);
         }
         {// Test 3: Euro -110
-            test = new Euro(-1, -10);
+            test = new Euro(-1, 10);
             assertEquals(test.getValore(), -110);
         }
+        {// Test 4: Euro 100
+            test = new Euro(2, -100);
+            assertEquals(test.getValore(), 100);
+        }
+        {// Test 5: Euro 100
+            test = new Euro(1);
+            assertEquals(test.getValore(), 100);
+        }
+        {// Test 6: Euro 327
+            test = new Euro(3.27);
+            assertEquals(test.getValore(), 327);
+        }
+        {// Test 7: Euro -200
+            test = new Euro(-2);
+            assertEquals(test.getValore(), -200);
+        }
+        {// Test 8: -132
+            test = new Euro(-1.32);
+            assertEquals(test.getValore(), -132);
+        }
+        {// Test 9: 0
+            test = new Euro(0, 0);
+            assertEquals(test.getValore(), 0);
+        }
+        {// Test 10: 0
+            test = new Euro(0);
+            assertEquals(test.getValore(), 0);
+        }
+        
     }
 
     @Test

@@ -7,21 +7,24 @@ import org.junit.Test;
 import code.Buisness_logic.Euro;
 
 public class EuroTest {
+
+    Euro test = null;
+
     @Test
     public void testGetValore() {
 
         //NOTE: I'm using scopes to delete objects as long as I don't need them
         
         {// Test 1: Euro 110
-            Euro test = new Euro(1, 10);
+            test = new Euro(1, 10);
             assertEquals(test.getValore() , 110);
         }
         {// Test 2: Euro 200
-            Euro test = new Euro(2, 0);
+            test = new Euro(2, 0);
             assertEquals(test.getValore(), 200);
         }
         {// Test 3: Euro -110
-            Euro test = new Euro(-1, -10);
+            test = new Euro(-1, -10);
             assertEquals(test.getValore(), -110);
         }
     }

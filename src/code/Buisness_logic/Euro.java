@@ -9,6 +9,7 @@ public class Euro {
             valore = euro*100 + cent;
         else
             valore = euro*100 - cent;
+        //TODO: Va chiarito bene cosa si intende fare con i segni e nel caso prendere provvedimenti
     }
 
     public Euro(double d){

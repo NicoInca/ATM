@@ -9,15 +9,21 @@ import code.Buisness_logic.Euro;
 public class EuroTest {
     @Test
     public void testGetValore() {
-        // Test 1: Euro 110
-        Euro test1 = new Euro(1, 10);
-        assertEquals(test1.getValore() , 110);
-        // Test 2: Euro 200
-        Euro test2 = new Euro(2, 0);
-        assertEquals(test2.getValore(), 200);
-        // Test 3: Euro -110
-        Euro test3 = new Euro(-1, -10);
-        assertEquals(test3.getValore(), -110);
+
+        //NOTE: I'm using scopes to delete objects as long as I don't need them
+        
+        {// Test 1: Euro 110
+            Euro test = new Euro(1, 10);
+            assertEquals(test.getValore() , 110);
+        }
+        {// Test 2: Euro 200
+            Euro test = new Euro(2, 0);
+            assertEquals(test.getValore(), 200);
+        }
+        {// Test 3: Euro -110
+            Euro test = new Euro(-1, -10);
+            assertEquals(test.getValore(), -110);
+        }
     }
 
     @Test

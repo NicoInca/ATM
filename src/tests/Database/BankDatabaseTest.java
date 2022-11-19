@@ -32,6 +32,13 @@ public class BankDatabaseTest {
     @Test
     public void testGetAvailableBalance(){
 
+        {// Test 1: testing first sample account balance
+            assertEquals(database.getAvailableBalance(12345), 1000.0, 0);
+        }
+        {// Test 2: testing secomd sample account
+            assertEquals(database.getAvailableBalance(98765), 200.0, 0);
+        }
+
     }
 
     @Test

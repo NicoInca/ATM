@@ -20,22 +20,38 @@ public class Euro {
     }
 
     public Euro somma (Euro e){
+        // checking if e is null and throwing ane exception if it is
+        if(e==null){
+            throw new IllegalArgumentException("pharam can't be null");
+        }
         this.valore = this.valore + e.getValore();
         return this;
     }
 
     public Euro sottrai (Euro e){
+        // checking if e is null and throwing ane exception if it is
+        if(e==null){
+            throw new IllegalArgumentException("pharam can't be null");
+        }
         this.valore = this.valore - e.getValore();
         return this;
     }
 
     public boolean ugualeA(Euro e){
+        // checking if e is null and throwing ane exception if it is
+        if(e==null){
+            throw new IllegalArgumentException("pharam can't be null");
+        }
         if(valore == e.getValore())
             return true;
         else return false;
     }
 
     public boolean minoreDi(Euro e){
+        // checking if e is null and throwing ane exception if it is
+        if(e==null){
+            throw new IllegalArgumentException("pharam can't be null");
+        }
         if(valore <= e.getValore())
             return true;
         else return false;

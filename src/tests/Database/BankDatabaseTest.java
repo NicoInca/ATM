@@ -53,8 +53,14 @@ public class BankDatabaseTest {
     @Test
     public void testDebit(){
 
-        {
-            
+        {   // test 1
+            database.debit(12345, 1000);
+            assertEquals(database.getAvailableBalance(12345).getValore(), 0);
+        }
+
+        {   // test 2
+            database.debit(98765, 1000);
+            assertEquals(database.getAvailableBalance(98765).getValore(), -80000); 
         }
 
     }

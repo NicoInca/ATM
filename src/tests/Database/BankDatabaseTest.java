@@ -6,7 +6,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import code.Database.Account;
 import code.Database.BankDatabase;
 
 public class BankDatabaseTest {
@@ -33,10 +32,10 @@ public class BankDatabaseTest {
     public void testGetAvailableBalance(){
 
         {// Test 1: testing first sample account balance
-            assertEquals(database.getAvailableBalance(12345), 1000.0, 0);
+            assertEquals(database.getAvailableBalance(12345).getValore(), 100000, 0);
         }
         {// Test 2: testing secomd sample account
-            assertEquals(database.getAvailableBalance(98765), 200.0, 0);
+            assertEquals(database.getAvailableBalance(98765).getValore(), 20000, 0);
         }
 
     }
@@ -53,6 +52,10 @@ public class BankDatabaseTest {
 
     @Test
     public void testDebit(){
+
+        {
+            
+        }
 
     }
     
